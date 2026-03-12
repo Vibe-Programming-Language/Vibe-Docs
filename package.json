@@ -1,0 +1,11 @@
+{
+  "name": "vibe-docs",
+  "version": "1.0.0",
+  "description": "Vibe Programming Language Documentation",
+  "scripts": {
+    "dev": "npx serve public",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve public"
+  },
+  "private": true
+}
