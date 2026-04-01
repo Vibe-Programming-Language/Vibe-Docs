@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>quantum Module - Vibe Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/docs.css" /></head><body>
+<div class="docs-layout"><aside class="sidebar"><input id="doc-search" class="search-box" placeholder="Search docs" /><div id="search-results" class="search-results"></div>
+<h3>Standard Library</h3><a href="../index.html">Home</a>
+<a href="dsa.html">dsa</a><a href="neural.html">neural</a><a href="ai.html">ai</a><a href="data.html">data</a><a href="viz.html">viz</a><a href="image.html">image</a><a href="web.html">web</a><a href="db.html">db</a><a href="crypto.html">crypto</a><a href="fs.html">fs</a><a href="async.html">async</a><a href="test.html">test</a><a href="math.html">math</a><a href="audio.html">audio</a><a href="cloud.html">cloud</a><a href="game.html">game</a><a href="web3.html">web3</a><a href="iot.html">iot</a><a href="robot.html">robot</a><a href="quantum.html">quantum</a>
+</aside><main class="main">
+<div class="breadcrumbs"><a href="../index.html">Docs</a> / Standard Library / quantum</div>
+<div class="page-title"><h1>quantum Module</h1><span class="version-badge">v2.0</span><span class="badge badge-new">New</span></div>
+<div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+<h2 id="overview">Overview</h2><p>quantum built-in module for Vibe v2.0.</p>
+<h2 id="installation-import">Installation/Import</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Import quantum
+import quantum</code></pre></div>
+<h2 id="summary">Summary</h2><table class="summary-table"><tr><th>Topic</th><th>Value</th></tr><tr><td>Module</td><td>quantum</td></tr><tr><td>Documented APIs</td><td>20</td></tr><tr><td>Sections</td><td>Overview, Import, API, Examples, Best Practices, Common Errors, See Also</td></tr></table>
+<h2 id="quick-start">Quick Start</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Quick start for quantum
+import quantum
+show "quantum loaded"</code></pre></div>
+<h2 id="advanced">Advanced</h2><div class="tab-group"><div class="tab-header"><button class="tab-btn active" data-tab="basic">Basic</button><button class="tab-btn" data-tab="advanced-tab">Advanced</button><button class="tab-btn" data-tab="expert">Expert</button></div><div class="tab-content active" id="basic"><p>Start with defaults and validate input types.</p></div><div class="tab-content" id="advanced-tab"><p>Use module-specific options, batching, and retries for production.</p></div><div class="tab-content" id="expert"><p>Benchmark critical paths and profile memory use.</p></div></div>
+<h2 id="api-reference">API Reference</h2>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Qubit</span><span class="api-params">Qubit()</span></div>
+  <div class="api-description">quantum API 1: Qubit operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Qubit
+let result = quantum.Qubit()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit</span><span class="api-params">Circuit(numQubits)</span></div>
+  <div class="api-description">quantum API 2: Circuit operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit
+let result = quantum.Circuit(numQubits)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.h</span><span class="api-params">Circuit.h(qubit)</span></div>
+  <div class="api-description">quantum API 3: Circuit.h operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.h
+let result = quantum.Circuit.h(qubit)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.x</span><span class="api-params">Circuit.x(qubit)</span></div>
+  <div class="api-description">quantum API 4: Circuit.x operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.x
+let result = quantum.Circuit.x(qubit)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.z</span><span class="api-params">Circuit.z(qubit)</span></div>
+  <div class="api-description">quantum API 5: Circuit.z operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.z
+let result = quantum.Circuit.z(qubit)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.cx</span><span class="api-params">Circuit.cx(control, target)</span></div>
+  <div class="api-description">quantum API 6: Circuit.cx operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.cx
+let result = quantum.Circuit.cx(control, target)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.ccx</span><span class="api-params">Circuit.ccx(c1, c2, target)</span></div>
+  <div class="api-description">quantum API 7: Circuit.ccx operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.ccx
+let result = quantum.Circuit.ccx(c1, c2, target)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.rx</span><span class="api-params">Circuit.rx(qubit, angle)</span></div>
+  <div class="api-description">quantum API 8: Circuit.rx operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.rx
+let result = quantum.Circuit.rx(qubit, angle)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.swap</span><span class="api-params">Circuit.swap(q1, q2)</span></div>
+  <div class="api-description">quantum API 9: Circuit.swap operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.swap
+let result = quantum.Circuit.swap(q1, q2)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.measure</span><span class="api-params">Circuit.measure(qubit)</span></div>
+  <div class="api-description">quantum API 10: Circuit.measure operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.measure
+let result = quantum.Circuit.measure(qubit)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Circuit.measureAll</span><span class="api-params">Circuit.measureAll()</span></div>
+  <div class="api-description">quantum API 11: Circuit.measureAll operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Circuit.measureAll
+let result = quantum.Circuit.measureAll()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Simulator</span><span class="api-params">Simulator(backend)</span></div>
+  <div class="api-description">quantum API 12: Simulator operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Simulator
+let result = quantum.Simulator(backend)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.Simulator.run</span><span class="api-params">Simulator.run(circuit, shots)</span></div>
+  <div class="api-description">quantum API 13: Simulator.run operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.Simulator.run
+let result = quantum.Simulator.run(circuit, shots)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.algorithms.grover</span><span class="api-params">algorithms.grover(oracle, numQubits)</span></div>
+  <div class="api-description">quantum API 14: algorithms.grover operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.algorithms.grover
+let result = quantum.algorithms.grover(oracle, numQubits)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.algorithms.shor</span><span class="api-params">algorithms.shor(N)</span></div>
+  <div class="api-description">quantum API 15: algorithms.shor operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.algorithms.shor
+let result = quantum.algorithms.shor(N)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.algorithms.qft</span><span class="api-params">algorithms.qft(circuit)</span></div>
+  <div class="api-description">quantum API 16: algorithms.qft operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.algorithms.qft
+let result = quantum.algorithms.qft(circuit)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.algorithms.vqe</span><span class="api-params">algorithms.vqe(hamiltonian, ansatz)</span></div>
+  <div class="api-description">quantum API 17: algorithms.vqe operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.algorithms.vqe
+let result = quantum.algorithms.vqe(hamiltonian, ansatz)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.algorithms.qaoa</span><span class="api-params">algorithms.qaoa(problem)</span></div>
+  <div class="api-description">quantum API 18: algorithms.qaoa operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.algorithms.qaoa
+let result = quantum.algorithms.qaoa(problem)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.noise.depolarizing</span><span class="api-params">noise.depolarizing(p)</span></div>
+  <div class="api-description">quantum API 19: noise.depolarizing operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.noise.depolarizing
+let result = quantum.noise.depolarizing(p)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">quantum.noise.amplitude_damping</span><span class="api-params">noise.amplitude_damping(gamma)</span></div>
+  <div class="api-description">quantum API 20: noise.amplitude_damping operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import quantum
+
+// Example: quantum.noise.amplitude_damping
+let result = quantum.noise.amplitude_damping(gamma)
+show result</code></pre></div></div>
+</div>
+<h2 id="best-practices">Best Practices</h2><ul><li>Validate arguments before calling APIs.</li><li>Use async patterns for I/O-heavy operations.</li><li>Add tests for edge cases.</li></ul>
+<h2 id="common-errors">Common Errors</h2><div class="callout callout-warning"><div>Warning</div><div>InvalidArgument: wrong type/shape passed to API.</div></div><div class="callout callout-danger"><div>Danger</div><div>RuntimeUnavailable: backend dependency missing.</div></div>
+<h2 id="see-also">See Also</h2><p>See <a href="../api-reference/complete-reference.html">complete reference</a>, <a href="async.html">async</a>, and <a href="test.html">test</a>.</p>
+</main></div><script src="../assets/prism-vibe.js"></script><script src="../assets/docs.js"></script></body></html>

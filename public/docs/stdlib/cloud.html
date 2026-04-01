@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>cloud Module - Vibe Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/docs.css" /></head><body>
+<div class="docs-layout"><aside class="sidebar"><input id="doc-search" class="search-box" placeholder="Search docs" /><div id="search-results" class="search-results"></div>
+<h3>Standard Library</h3><a href="../index.html">Home</a>
+<a href="dsa.html">dsa</a><a href="neural.html">neural</a><a href="ai.html">ai</a><a href="data.html">data</a><a href="viz.html">viz</a><a href="image.html">image</a><a href="web.html">web</a><a href="db.html">db</a><a href="crypto.html">crypto</a><a href="fs.html">fs</a><a href="async.html">async</a><a href="test.html">test</a><a href="math.html">math</a><a href="audio.html">audio</a><a href="cloud.html">cloud</a><a href="game.html">game</a><a href="web3.html">web3</a><a href="iot.html">iot</a><a href="robot.html">robot</a><a href="quantum.html">quantum</a>
+</aside><main class="main">
+<div class="breadcrumbs"><a href="../index.html">Docs</a> / Standard Library / cloud</div>
+<div class="page-title"><h1>cloud Module</h1><span class="version-badge">v2.0</span><span class="badge badge-new">New</span></div>
+<div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+<h2 id="overview">Overview</h2><p>cloud built-in module for Vibe v2.0.</p>
+<h2 id="installation-import">Installation/Import</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Import cloud
+import cloud</code></pre></div>
+<h2 id="summary">Summary</h2><table class="summary-table"><tr><th>Topic</th><th>Value</th></tr><tr><td>Module</td><td>cloud</td></tr><tr><td>Documented APIs</td><td>20</td></tr><tr><td>Sections</td><td>Overview, Import, API, Examples, Best Practices, Common Errors, See Also</td></tr></table>
+<h2 id="quick-start">Quick Start</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Quick start for cloud
+import cloud
+show "cloud loaded"</code></pre></div>
+<h2 id="advanced">Advanced</h2><div class="tab-group"><div class="tab-header"><button class="tab-btn active" data-tab="basic">Basic</button><button class="tab-btn" data-tab="advanced-tab">Advanced</button><button class="tab-btn" data-tab="expert">Expert</button></div><div class="tab-content active" id="basic"><p>Start with defaults and validate input types.</p></div><div class="tab-content" id="advanced-tab"><p>Use module-specific options, batching, and retries for production.</p></div><div class="tab-content" id="expert"><p>Benchmark critical paths and profile memory use.</p></div></div>
+<h2 id="api-reference">API Reference</h2>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.deploy</span><span class="api-params">deploy(app, provider, config)</span></div>
+  <div class="api-description">cloud API 1: deploy operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.deploy
+let result = cloud.deploy(app, provider, config)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.aws.S3</span><span class="api-params">aws.S3(bucket)</span></div>
+  <div class="api-description">cloud API 2: aws.S3 operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.aws.S3
+let result = cloud.aws.S3(bucket)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.aws.S3.upload</span><span class="api-params">aws.S3.upload(file)</span></div>
+  <div class="api-description">cloud API 3: aws.S3.upload operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.aws.S3.upload
+let result = cloud.aws.S3.upload(file)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.aws.S3.download</span><span class="api-params">aws.S3.download(key)</span></div>
+  <div class="api-description">cloud API 4: aws.S3.download operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.aws.S3.download
+let result = cloud.aws.S3.download(key)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.aws.Lambda</span><span class="api-params">aws.Lambda(fn)</span></div>
+  <div class="api-description">cloud API 5: aws.Lambda operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.aws.Lambda
+let result = cloud.aws.Lambda(fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.aws.DynamoDB</span><span class="api-params">aws.DynamoDB(table)</span></div>
+  <div class="api-description">cloud API 6: aws.DynamoDB operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.aws.DynamoDB
+let result = cloud.aws.DynamoDB(table)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.gcp.Storage</span><span class="api-params">gcp.Storage(bucket)</span></div>
+  <div class="api-description">cloud API 7: gcp.Storage operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.gcp.Storage
+let result = cloud.gcp.Storage(bucket)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.gcp.BigQuery</span><span class="api-params">gcp.BigQuery(dataset)</span></div>
+  <div class="api-description">cloud API 8: gcp.BigQuery operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.gcp.BigQuery
+let result = cloud.gcp.BigQuery(dataset)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.azure.Blob</span><span class="api-params">azure.Blob(container)</span></div>
+  <div class="api-description">cloud API 9: azure.Blob operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.azure.Blob
+let result = cloud.azure.Blob(container)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.azure.Functions</span><span class="api-params">azure.Functions(fn)</span></div>
+  <div class="api-description">cloud API 10: azure.Functions operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.azure.Functions
+let result = cloud.azure.Functions(fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.docker.build</span><span class="api-params">docker.build(dockerfile)</span></div>
+  <div class="api-description">cloud API 11: docker.build operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.docker.build
+let result = cloud.docker.build(dockerfile)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.docker.run</span><span class="api-params">docker.run(image, options)</span></div>
+  <div class="api-description">cloud API 12: docker.run operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.docker.run
+let result = cloud.docker.run(image, options)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.docker.push</span><span class="api-params">docker.push(image, registry)</span></div>
+  <div class="api-description">cloud API 13: docker.push operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.docker.push
+let result = cloud.docker.push(image, registry)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.docker.compose</span><span class="api-params">docker.compose(yamlPath)</span></div>
+  <div class="api-description">cloud API 14: docker.compose operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.docker.compose
+let result = cloud.docker.compose(yamlPath)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.k8s.deploy</span><span class="api-params">k8s.deploy(manifest)</span></div>
+  <div class="api-description">cloud API 15: k8s.deploy operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.k8s.deploy
+let result = cloud.k8s.deploy(manifest)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.k8s.scale</span><span class="api-params">k8s.scale(deployment, replicas)</span></div>
+  <div class="api-description">cloud API 16: k8s.scale operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.k8s.scale
+let result = cloud.k8s.scale(deployment, replicas)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.ci.pipeline</span><span class="api-params">ci.pipeline(steps)</span></div>
+  <div class="api-description">cloud API 17: ci.pipeline operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.ci.pipeline
+let result = cloud.ci.pipeline(steps)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.aws.SQS</span><span class="api-params">aws.SQS(queue)</span></div>
+  <div class="api-description">cloud API 18: aws.SQS operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.aws.SQS
+let result = cloud.aws.SQS(queue)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.deploy</span><span class="api-params">deploy(app, &quot;aws&quot;, config)</span></div>
+  <div class="api-description">cloud API 19: deploy operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.deploy
+let result = cloud.deploy(app, "aws", config)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">cloud.k8s.deploy</span><span class="api-params">k8s.deploy(manifest)</span></div>
+  <div class="api-description">cloud API 20: k8s.deploy operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import cloud
+
+// Example: cloud.k8s.deploy
+let result = cloud.k8s.deploy(manifest)
+show result</code></pre></div></div>
+</div>
+<h2 id="best-practices">Best Practices</h2><ul><li>Validate arguments before calling APIs.</li><li>Use async patterns for I/O-heavy operations.</li><li>Add tests for edge cases.</li></ul>
+<h2 id="common-errors">Common Errors</h2><div class="callout callout-warning"><div>Warning</div><div>InvalidArgument: wrong type/shape passed to API.</div></div><div class="callout callout-danger"><div>Danger</div><div>RuntimeUnavailable: backend dependency missing.</div></div>
+<h2 id="see-also">See Also</h2><p>See <a href="../api-reference/complete-reference.html">complete reference</a>, <a href="async.html">async</a>, and <a href="test.html">test</a>.</p>
+</main></div><script src="../assets/prism-vibe.js"></script><script src="../assets/docs.js"></script></body></html>

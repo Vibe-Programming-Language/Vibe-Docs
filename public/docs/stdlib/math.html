@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>math Module - Vibe Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/docs.css" /></head><body>
+<div class="docs-layout"><aside class="sidebar"><input id="doc-search" class="search-box" placeholder="Search docs" /><div id="search-results" class="search-results"></div>
+<h3>Standard Library</h3><a href="../index.html">Home</a>
+<a href="dsa.html">dsa</a><a href="neural.html">neural</a><a href="ai.html">ai</a><a href="data.html">data</a><a href="viz.html">viz</a><a href="image.html">image</a><a href="web.html">web</a><a href="db.html">db</a><a href="crypto.html">crypto</a><a href="fs.html">fs</a><a href="async.html">async</a><a href="test.html">test</a><a href="math.html">math</a><a href="audio.html">audio</a><a href="cloud.html">cloud</a><a href="game.html">game</a><a href="web3.html">web3</a><a href="iot.html">iot</a><a href="robot.html">robot</a><a href="quantum.html">quantum</a>
+</aside><main class="main">
+<div class="breadcrumbs"><a href="../index.html">Docs</a> / Standard Library / math</div>
+<div class="page-title"><h1>math Module</h1><span class="version-badge">v2.0</span><span class="badge badge-new">New</span></div>
+<div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+<h2 id="overview">Overview</h2><p>math built-in module for Vibe v2.0.</p>
+<h2 id="installation-import">Installation/Import</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Import math
+import math</code></pre></div>
+<h2 id="summary">Summary</h2><table class="summary-table"><tr><th>Topic</th><th>Value</th></tr><tr><td>Module</td><td>math</td></tr><tr><td>Documented APIs</td><td>20</td></tr><tr><td>Sections</td><td>Overview, Import, API, Examples, Best Practices, Common Errors, See Also</td></tr></table>
+<h2 id="quick-start">Quick Start</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Quick start for math
+import math
+show "math loaded"</code></pre></div>
+<h2 id="advanced">Advanced</h2><div class="tab-group"><div class="tab-header"><button class="tab-btn active" data-tab="basic">Basic</button><button class="tab-btn" data-tab="advanced-tab">Advanced</button><button class="tab-btn" data-tab="expert">Expert</button></div><div class="tab-content active" id="basic"><p>Start with defaults and validate input types.</p></div><div class="tab-content" id="advanced-tab"><p>Use module-specific options, batching, and retries for production.</p></div><div class="tab-content" id="expert"><p>Benchmark critical paths and profile memory use.</p></div></div>
+<h2 id="api-reference">API Reference</h2>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.PI</span><span class="api-params">PI()</span></div>
+  <div class="api-description">math API 1: PI operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.PI
+let result = math.PI()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.E</span><span class="api-params">E()</span></div>
+  <div class="api-description">math API 2: E operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.E
+let result = math.E()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.abs</span><span class="api-params">abs(x)</span></div>
+  <div class="api-description">math API 3: abs operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.abs
+let result = math.abs(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.ceil</span><span class="api-params">ceil(x)</span></div>
+  <div class="api-description">math API 4: ceil operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.ceil
+let result = math.ceil(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.floor</span><span class="api-params">floor(x)</span></div>
+  <div class="api-description">math API 5: floor operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.floor
+let result = math.floor(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.round</span><span class="api-params">round(x)</span></div>
+  <div class="api-description">math API 6: round operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.round
+let result = math.round(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.pow</span><span class="api-params">pow(x, y)</span></div>
+  <div class="api-description">math API 7: pow operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.pow
+let result = math.pow(x, y)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.sqrt</span><span class="api-params">sqrt(x)</span></div>
+  <div class="api-description">math API 8: sqrt operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.sqrt
+let result = math.sqrt(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.exp</span><span class="api-params">exp(x)</span></div>
+  <div class="api-description">math API 9: exp operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.exp
+let result = math.exp(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.log</span><span class="api-params">log(x)</span></div>
+  <div class="api-description">math API 10: log operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.log
+let result = math.log(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.sin</span><span class="api-params">sin(x)</span></div>
+  <div class="api-description">math API 11: sin operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.sin
+let result = math.sin(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.cos</span><span class="api-params">cos(x)</span></div>
+  <div class="api-description">math API 12: cos operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.cos
+let result = math.cos(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.tan</span><span class="api-params">tan(x)</span></div>
+  <div class="api-description">math API 13: tan operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.tan
+let result = math.tan(x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.randInt</span><span class="api-params">randInt(min, max)</span></div>
+  <div class="api-description">math API 14: randInt operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.randInt
+let result = math.randInt(min, max)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.shuffle</span><span class="api-params">shuffle(array)</span></div>
+  <div class="api-description">math API 15: shuffle operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.shuffle
+let result = math.shuffle(array)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.dot</span><span class="api-params">dot(a, b)</span></div>
+  <div class="api-description">math API 16: dot operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.dot
+let result = math.dot(a, b)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.eigenvalues</span><span class="api-params">eigenvalues(matrix)</span></div>
+  <div class="api-description">math API 17: eigenvalues operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.eigenvalues
+let result = math.eigenvalues(matrix)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.derivative</span><span class="api-params">derivative(fn, x)</span></div>
+  <div class="api-description">math API 18: derivative operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.derivative
+let result = math.derivative(fn, x)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.gradientDescent</span><span class="api-params">gradientDescent(fn, x0, lr, epochs)</span></div>
+  <div class="api-description">math API 19: gradientDescent operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.gradientDescent
+let result = math.gradientDescent(fn, x0, lr, epochs)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">math.modInverse</span><span class="api-params">modInverse(a, m)</span></div>
+  <div class="api-description">math API 20: modInverse operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import math
+
+// Example: math.modInverse
+let result = math.modInverse(a, m)
+show result</code></pre></div></div>
+</div>
+<h2 id="best-practices">Best Practices</h2><ul><li>Validate arguments before calling APIs.</li><li>Use async patterns for I/O-heavy operations.</li><li>Add tests for edge cases.</li></ul>
+<h2 id="common-errors">Common Errors</h2><div class="callout callout-warning"><div>Warning</div><div>InvalidArgument: wrong type/shape passed to API.</div></div><div class="callout callout-danger"><div>Danger</div><div>RuntimeUnavailable: backend dependency missing.</div></div>
+<h2 id="see-also">See Also</h2><p>See <a href="../api-reference/complete-reference.html">complete reference</a>, <a href="async.html">async</a>, and <a href="test.html">test</a>.</p>
+</main></div><script src="../assets/prism-vibe.js"></script><script src="../assets/docs.js"></script></body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>test Module - Vibe Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/docs.css" /></head><body>
+<div class="docs-layout"><aside class="sidebar"><input id="doc-search" class="search-box" placeholder="Search docs" /><div id="search-results" class="search-results"></div>
+<h3>Standard Library</h3><a href="../index.html">Home</a>
+<a href="dsa.html">dsa</a><a href="neural.html">neural</a><a href="ai.html">ai</a><a href="data.html">data</a><a href="viz.html">viz</a><a href="image.html">image</a><a href="web.html">web</a><a href="db.html">db</a><a href="crypto.html">crypto</a><a href="fs.html">fs</a><a href="async.html">async</a><a href="test.html">test</a><a href="math.html">math</a><a href="audio.html">audio</a><a href="cloud.html">cloud</a><a href="game.html">game</a><a href="web3.html">web3</a><a href="iot.html">iot</a><a href="robot.html">robot</a><a href="quantum.html">quantum</a>
+</aside><main class="main">
+<div class="breadcrumbs"><a href="../index.html">Docs</a> / Standard Library / test</div>
+<div class="page-title"><h1>test Module</h1><span class="version-badge">v2.0</span><span class="badge badge-new">New</span></div>
+<div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+<h2 id="overview">Overview</h2><p>test built-in module for Vibe v2.0.</p>
+<h2 id="installation-import">Installation/Import</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Import test
+import test</code></pre></div>
+<h2 id="summary">Summary</h2><table class="summary-table"><tr><th>Topic</th><th>Value</th></tr><tr><td>Module</td><td>test</td></tr><tr><td>Documented APIs</td><td>20</td></tr><tr><td>Sections</td><td>Overview, Import, API, Examples, Best Practices, Common Errors, See Also</td></tr></table>
+<h2 id="quick-start">Quick Start</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Quick start for test
+import test
+show "test loaded"</code></pre></div>
+<h2 id="advanced">Advanced</h2><div class="tab-group"><div class="tab-header"><button class="tab-btn active" data-tab="basic">Basic</button><button class="tab-btn" data-tab="advanced-tab">Advanced</button><button class="tab-btn" data-tab="expert">Expert</button></div><div class="tab-content active" id="basic"><p>Start with defaults and validate input types.</p></div><div class="tab-content" id="advanced-tab"><p>Use module-specific options, batching, and retries for production.</p></div><div class="tab-content" id="expert"><p>Benchmark critical paths and profile memory use.</p></div></div>
+<h2 id="api-reference">API Reference</h2>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.describe</span><span class="api-params">describe(name, fn)</span></div>
+  <div class="api-description">test API 1: describe operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.describe
+let result = test.describe(name, fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.it</span><span class="api-params">it(name, fn)</span></div>
+  <div class="api-description">test API 2: it operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.it
+let result = test.it(name, fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value)</span></div>
+  <div class="api-description">test API 3: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toBe(expected)</span></div>
+  <div class="api-description">test API 4: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toBe(expected)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toEqual(expected)</span></div>
+  <div class="api-description">test API 5: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toEqual(expected)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toContain(item)</span></div>
+  <div class="api-description">test API 6: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toContain(item)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toThrow(errorType)</span></div>
+  <div class="api-description">test API 7: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toThrow(errorType)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.beforeEach</span><span class="api-params">beforeEach(fn)</span></div>
+  <div class="api-description">test API 8: beforeEach operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.beforeEach
+let result = test.beforeEach(fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.afterEach</span><span class="api-params">afterEach(fn)</span></div>
+  <div class="api-description">test API 9: afterEach operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.afterEach
+let result = test.afterEach(fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.beforeAll</span><span class="api-params">beforeAll(fn)</span></div>
+  <div class="api-description">test API 10: beforeAll operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.beforeAll
+let result = test.beforeAll(fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.afterAll</span><span class="api-params">afterAll(fn)</span></div>
+  <div class="api-description">test API 11: afterAll operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.afterAll
+let result = test.afterAll(fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.mock</span><span class="api-params">mock(fn)</span></div>
+  <div class="api-description">test API 12: mock operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.mock
+let result = test.mock(fn)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.spy</span><span class="api-params">spy(object, method)</span></div>
+  <div class="api-description">test API 13: spy operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.spy
+let result = test.spy(object, method)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.benchmark</span><span class="api-params">benchmark(name, fn, iterations)</span></div>
+  <div class="api-description">test API 14: benchmark operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.benchmark
+let result = test.benchmark(name, fn, iterations)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.run</span><span class="api-params">run()</span></div>
+  <div class="api-description">test API 15: run operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.run
+let result = test.run()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toBeTruthy()</span></div>
+  <div class="api-description">test API 16: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toBeTruthy()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toBeFalsy()</span></div>
+  <div class="api-description">test API 17: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toBeFalsy()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toHaveLength(n)</span></div>
+  <div class="api-description">test API 18: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toHaveLength(n)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toMatch(regex)</span></div>
+  <div class="api-description">test API 19: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toMatch(regex)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">test.expect</span><span class="api-params">expect(value).toBeType(type)</span></div>
+  <div class="api-description">test API 20: expect operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import test
+
+// Example: test.expect
+let result = test.expect(value).toBeType(type)
+show result</code></pre></div></div>
+</div>
+<h2 id="best-practices">Best Practices</h2><ul><li>Validate arguments before calling APIs.</li><li>Use async patterns for I/O-heavy operations.</li><li>Add tests for edge cases.</li></ul>
+<h2 id="common-errors">Common Errors</h2><div class="callout callout-warning"><div>Warning</div><div>InvalidArgument: wrong type/shape passed to API.</div></div><div class="callout callout-danger"><div>Danger</div><div>RuntimeUnavailable: backend dependency missing.</div></div>
+<h2 id="see-also">See Also</h2><p>See <a href="../api-reference/complete-reference.html">complete reference</a>, <a href="async.html">async</a>, and <a href="test.html">test</a>.</p>
+</main></div><script src="../assets/prism-vibe.js"></script><script src="../assets/docs.js"></script></body></html>

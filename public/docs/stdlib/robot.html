@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>robot Module - Vibe Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/docs.css" /></head><body>
+<div class="docs-layout"><aside class="sidebar"><input id="doc-search" class="search-box" placeholder="Search docs" /><div id="search-results" class="search-results"></div>
+<h3>Standard Library</h3><a href="../index.html">Home</a>
+<a href="dsa.html">dsa</a><a href="neural.html">neural</a><a href="ai.html">ai</a><a href="data.html">data</a><a href="viz.html">viz</a><a href="image.html">image</a><a href="web.html">web</a><a href="db.html">db</a><a href="crypto.html">crypto</a><a href="fs.html">fs</a><a href="async.html">async</a><a href="test.html">test</a><a href="math.html">math</a><a href="audio.html">audio</a><a href="cloud.html">cloud</a><a href="game.html">game</a><a href="web3.html">web3</a><a href="iot.html">iot</a><a href="robot.html">robot</a><a href="quantum.html">quantum</a>
+</aside><main class="main">
+<div class="breadcrumbs"><a href="../index.html">Docs</a> / Standard Library / robot</div>
+<div class="page-title"><h1>robot Module</h1><span class="version-badge">v2.0</span><span class="badge badge-new">New</span></div>
+<div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+<h2 id="overview">Overview</h2><p>robot built-in module for Vibe v2.0.</p>
+<h2 id="installation-import">Installation/Import</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Import robot
+import robot</code></pre></div>
+<h2 id="summary">Summary</h2><table class="summary-table"><tr><th>Topic</th><th>Value</th></tr><tr><td>Module</td><td>robot</td></tr><tr><td>Documented APIs</td><td>20</td></tr><tr><td>Sections</td><td>Overview, Import, API, Examples, Best Practices, Common Errors, See Also</td></tr></table>
+<h2 id="quick-start">Quick Start</h2><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Quick start for robot
+import robot
+show "robot loaded"</code></pre></div>
+<h2 id="advanced">Advanced</h2><div class="tab-group"><div class="tab-header"><button class="tab-btn active" data-tab="basic">Basic</button><button class="tab-btn" data-tab="advanced-tab">Advanced</button><button class="tab-btn" data-tab="expert">Expert</button></div><div class="tab-content active" id="basic"><p>Start with defaults and validate input types.</p></div><div class="tab-content" id="advanced-tab"><p>Use module-specific options, batching, and retries for production.</p></div><div class="tab-content" id="expert"><p>Benchmark critical paths and profile memory use.</p></div></div>
+<h2 id="api-reference">API Reference</h2>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Arm</span><span class="api-params">Arm(joints)</span></div>
+  <div class="api-description">robot API 1: Arm operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Arm
+let result = robot.Arm(joints)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Arm.moveTo</span><span class="api-params">Arm.moveTo(x, y, z)</span></div>
+  <div class="api-description">robot API 2: Arm.moveTo operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Arm.moveTo
+let result = robot.Arm.moveTo(x, y, z)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Arm.rotate</span><span class="api-params">Arm.rotate(joint, angle)</span></div>
+  <div class="api-description">robot API 3: Arm.rotate operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Arm.rotate
+let result = robot.Arm.rotate(joint, angle)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Arm.grip</span><span class="api-params">Arm.grip()</span></div>
+  <div class="api-description">robot API 4: Arm.grip operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Arm.grip
+let result = robot.Arm.grip()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Arm.release</span><span class="api-params">Arm.release()</span></div>
+  <div class="api-description">robot API 5: Arm.release operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Arm.release
+let result = robot.Arm.release()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Drone</span><span class="api-params">Drone(connection)</span></div>
+  <div class="api-description">robot API 6: Drone operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Drone
+let result = robot.Drone(connection)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Drone.takeoff</span><span class="api-params">Drone.takeoff()</span></div>
+  <div class="api-description">robot API 7: Drone.takeoff operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Drone.takeoff
+let result = robot.Drone.takeoff()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Drone.land</span><span class="api-params">Drone.land()</span></div>
+  <div class="api-description">robot API 8: Drone.land operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Drone.land
+let result = robot.Drone.land()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Drone.moveTo</span><span class="api-params">Drone.moveTo(x, y, z)</span></div>
+  <div class="api-description">robot API 9: Drone.moveTo operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Drone.moveTo
+let result = robot.Drone.moveTo(x, y, z)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Drone.followPath</span><span class="api-params">Drone.followPath(waypoints)</span></div>
+  <div class="api-description">robot API 10: Drone.followPath operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Drone.followPath
+let result = robot.Drone.followPath(waypoints)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Mobile</span><span class="api-params">Mobile(connection)</span></div>
+  <div class="api-description">robot API 11: Mobile operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Mobile
+let result = robot.Mobile(connection)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Mobile.forward</span><span class="api-params">Mobile.forward(speed)</span></div>
+  <div class="api-description">robot API 12: Mobile.forward operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Mobile.forward
+let result = robot.Mobile.forward(speed)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Mobile.turnLeft</span><span class="api-params">Mobile.turnLeft(angle)</span></div>
+  <div class="api-description">robot API 13: Mobile.turnLeft operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Mobile.turnLeft
+let result = robot.Mobile.turnLeft(angle)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Mobile.navigate</span><span class="api-params">Mobile.navigate(path)</span></div>
+  <div class="api-description">robot API 14: Mobile.navigate operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Mobile.navigate
+let result = robot.Mobile.navigate(path)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.SLAM</span><span class="api-params">SLAM()</span></div>
+  <div class="api-description">robot API 15: SLAM operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.SLAM
+let result = robot.SLAM()
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.PathPlanner</span><span class="api-params">PathPlanner(map)</span></div>
+  <div class="api-description">robot API 16: PathPlanner operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.PathPlanner
+let result = robot.PathPlanner(map)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.PathPlanner.plan</span><span class="api-params">PathPlanner.plan(start, goal)</span></div>
+  <div class="api-description">robot API 17: PathPlanner.plan operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.PathPlanner.plan
+let result = robot.PathPlanner.plan(start, goal)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.Simulator</span><span class="api-params">Simulator(worldFile)</span></div>
+  <div class="api-description">robot API 18: Simulator operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.Simulator
+let result = robot.Simulator(worldFile)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.ROS</span><span class="api-params">ROS(masterURI)</span></div>
+  <div class="api-description">robot API 19: ROS operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.ROS
+let result = robot.ROS(masterURI)
+show result</code></pre></div></div>
+</div>
+<div class="api-card">
+  <div class="api-signature"><span class="api-name">robot.ROS.publish</span><span class="api-params">ROS.publish(topic, message)</span></div>
+  <div class="api-description">robot API 20: ROS.publish operation.</div>
+  <div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>arg</td><td>Any</td><td>required</td><td>Primary argument(s) for this API.</td></tr></table></div>
+  <div class="api-returns"><strong>Returns:</strong> Any - module-specific result.</div>
+  <div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import robot
+
+// Example: robot.ROS.publish
+let result = robot.ROS.publish(topic, message)
+show result</code></pre></div></div>
+</div>
+<h2 id="best-practices">Best Practices</h2><ul><li>Validate arguments before calling APIs.</li><li>Use async patterns for I/O-heavy operations.</li><li>Add tests for edge cases.</li></ul>
+<h2 id="common-errors">Common Errors</h2><div class="callout callout-warning"><div>Warning</div><div>InvalidArgument: wrong type/shape passed to API.</div></div><div class="callout callout-danger"><div>Danger</div><div>RuntimeUnavailable: backend dependency missing.</div></div>
+<h2 id="see-also">See Also</h2><p>See <a href="../api-reference/complete-reference.html">complete reference</a>, <a href="async.html">async</a>, and <a href="test.html">test</a>.</p>
+</main></div><script src="../assets/prism-vibe.js"></script><script src="../assets/docs.js"></script></body></html>

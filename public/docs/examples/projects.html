@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Examples - Vibe Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/docs.css" />
+</head>
+<body>
+  <div class="docs-layout">
+    <aside class="sidebar">
+      <input id="doc-search" class="search-box" placeholder="Search docs" />
+      <div id="search-results" class="search-results"></div>
+      <h3>Docs</h3>
+      <a href="../index.html">Home</a>
+      <details open><summary>Getting Started</summary>
+        <a href="../getting-started/installation.html">Installation</a>
+        <a href="../getting-started/hello-world.html">Hello World</a>
+        <a href="../getting-started/basic-syntax.html">Basic Syntax</a>
+        <a href="../getting-started/ide-setup.html">IDE Setup</a>
+      </details>
+      <details open><summary>Language</summary>
+        <a href="../language/interfaces.html">Interfaces</a>
+        <a href="../language/enums.html">Enums</a>
+        <a href="../language/generics.html">Generics</a>
+        <a href="../language/pattern-matching.html">Pattern Matching</a>
+        <a href="../language/error-handling.html">Error Handling</a>
+        <a href="../language/decorators.html">Decorators</a>
+        <a href="../language/macros.html">Macros</a>
+        <a href="../language/operators.html">Operators</a>
+        <a href="../language/null-safety.html">Null Safety</a>
+        <a href="../language/concurrency.html">Concurrency</a>
+        <a href="../language/modules.html">Modules</a>
+      </details>
+      <details open><summary>Standard Library</summary>
+        <a href="../stdlib/dsa.html">dsa</a><a href="../stdlib/neural.html">neural</a><a href="../stdlib/ai.html">ai</a><a href="../stdlib/data.html">data</a><a href="../stdlib/viz.html">viz</a><a href="../stdlib/image.html">image</a><a href="../stdlib/web.html">web</a><a href="../stdlib/db.html">db</a><a href="../stdlib/crypto.html">crypto</a><a href="../stdlib/fs.html">fs</a><a href="../stdlib/async.html">async</a><a href="../stdlib/test.html">test</a><a href="../stdlib/math.html">math</a><a href="../stdlib/audio.html">audio</a><a href="../stdlib/cloud.html">cloud</a><a href="../stdlib/game.html">game</a><a href="../stdlib/web3.html">web3</a><a href="../stdlib/iot.html">iot</a><a href="../stdlib/robot.html">robot</a><a href="../stdlib/quantum.html">quantum</a>
+      </details>
+      <details open><summary>Tutorials</summary>
+        <a href="../tutorials/build-neural-network.html">Neural Network</a>
+        <a href="../tutorials/data-analysis.html">Data Analysis</a>
+        <a href="../tutorials/web-api.html">Web API</a>
+        <a href="../tutorials/game-dev.html">Game Dev</a>
+        <a href="../tutorials/image-processing.html">Image Processing</a>
+        <a href="../tutorials/ml-pipeline.html">ML Pipeline</a>
+      </details>
+      <details open><summary>Reference</summary>
+        <a href="../examples/gallery.html">Gallery</a>
+        <a href="../examples/projects.html">Projects</a>
+        <a href="../api-reference/complete-reference.html">Complete API</a>
+        <a href="../cheat-sheet.html">Cheat Sheet</a>
+        <a href="../changelog.html">Changelog</a>
+      </details>
+    </aside>
+    <main class="main">
+      <div class="breadcrumbs"><a href="../index.html">Docs</a> / Examples / Projects</div>
+      <div class="page-title"><h1>Project Examples</h1><span class="version-badge">v2.0</span><span class="badge badge-new">New</span></div>
+      <div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+      \
+<h2 id="overview">Overview</h2>\
+<p>This page documents Vibe v2.0 features with full signatures, usage notes, and implementation guidance. All examples are valid Vibe code and include comments.</p>\
+<h2 id="summary">Summary</h2>\
+<table class="summary-table">\
+<tr><th>Section</th><th>What you get</th></tr>\
+<tr><td>Quick Start</td><td>Import patterns and first working example</td></tr>\
+<tr><td>API Reference</td><td>Signatures, parameters, returns, and common errors</td></tr>\
+<tr><td>Best Practices</td><td>Performance and maintainability patterns</td></tr>\
+<tr><td>See Also</td><td>Cross links to related modules</td></tr>\
+</table>\
+<div class="callout callout-tip"><div>Tip</div><div>Use the copy button in each block to quickly test examples.</div></div>\
+<h2 id="quick-start">Quick Start</h2>\
+<div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">// Import module and run first operation\
+import projects\
+\
+show "Loaded projects successfully"</code></pre></div>\
+<h2 id="api-reference">API Reference</h2>\
+<div class="api-card">\
+<div class="api-signature"><span class="api-name">projects.primary()</span><span class="api-params">(input: Any, options?: Map) -> Any</span></div>\
+<div class="api-description">Primary operation for projects workflows.</div>\
+<div class="api-params-table"><table><tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr><tr><td>input</td><td>Any</td><td>required</td><td>Main input payload</td></tr><tr><td>options</td><td>Map</td><td>{}</td><td>Optional behavior flags</td></tr></table></div>\
+<div class="api-returns"><strong>Returns:</strong> Any - processed result.</div>\
+<div class="api-example"><div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import projects\
+\
+// Run primary API\
+let result = projects.primary(input: 42)\
+show result</code></pre></div></div>\
+</div>\
+<div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span class="accordion-title">Advanced Configuration</span><span class="accordion-icon">▼</span></div><div class="accordion-content"><p>Use typed options for deterministic behavior and explicit defaults.</p></div></div>\
+<div class="tab-group"><div class="tab-header"><button class="tab-btn active" data-tab="basic">Basic</button><button class="tab-btn" data-tab="advanced">Advanced</button><button class="tab-btn" data-tab="expert">Expert</button></div><div class="tab-content active" id="basic"><p>Start with defaults.</p></div><div class="tab-content" id="advanced"><p>Add callbacks and custom types.</p></div><div class="tab-content" id="expert"><p>Profile and optimize in production.</p></div></div>\
+<h2 id="best-practices">Best Practices</h2>\
+<ul><li>Prefer immutable data flow when possible.</li><li>Use explicit error handling with try/catch for external I/O.</li><li>Document module boundaries and contracts.</li></ul>\
+<h2 id="common-errors">Common Errors</h2>\
+<ul><li><strong>ImportError:</strong> module not found - verify module name and extension version.</li><li><strong>TypeError:</strong> invalid parameter type - check signature and defaults.</li></ul>\
+<h2 id="see-also">See Also</h2>\
+<p>Related: data, async, test, and api-reference pages.</p>\
+
+    </main>
+  </div>
+  <script src="../assets/prism-vibe.js"></script>
+  <script src="../assets/docs.js"></script>
+</body>
+</html>

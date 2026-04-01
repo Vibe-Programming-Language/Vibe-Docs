@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Docs</title>
+  <link rel="stylesheet" href="assets/docs.css" />
+</head>
+<body>
+  <div class="docs-layout">
+    <aside class="sidebar">
+      <input id="doc-search" class="search-box" placeholder="Search docs" />
+      <div id="search-results" class="search-results"></div>
+      <h2>Vibe Docs <span class="version-badge">v1.2 Runtime</span></h2>
+      <p>Language + runtime + tooling docs.</p>
+      <a href="getting-started/installation.html">Start Here</a>
+      <a href="stdlib/neural.html">Neural Module</a>
+      <a href="stdlib/dsa.html">DSA Module</a>
+      <a href="stdlib/ai.html">AI Module</a>
+      <a href="stdlib/data.html">Data Module</a>
+      <a href="stdlib/image.html">Image Module</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="api-reference/complete-reference.html">API Reference</a>
+    </aside>
+    <main class="main">
+      <div class="breadcrumbs">Docs / Home</div>
+      <h1>Vibe Documentation</h1>
+      <p>This documentation now tracks the shipped runtime behavior in Vibe v1.2, including tensor math, model workflows, graph shortest path, REPL updates, and updated packaging/release flow.</p>
+
+      <table class="summary-table">
+        <tr><th>Track</th><th>What is documented</th></tr>
+        <tr><td>neural</td><td>Tensor constructors, tensor methods, Sequential, fit/evaluate/predict</td></tr>
+        <tr><td>dsa</td><td>Stack, Queue, Graph, quickSort, full dijkstra shortest path</td></tr>
+        <tr><td>ai</td><td>RandomForest workflow and metrics helpers</td></tr>
+        <tr><td>data</td><td>DataFrame core shape/columns/select workflows</td></tr>
+        <tr><td>image</td><td>Image load, resize, grayscale, save, show flow</td></tr>
+      </table>
+
+      <div class="accordion active">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><strong>What changed in this docs refresh</strong><span class="accordion-icon">▼</span></div>
+        <div class="accordion-content">
+          <ul>
+            <li>Replaced generic placeholder API text with runtime-accurate API behavior.</li>
+            <li>Added runnable code examples that map to the shipped v1.2 implementation.</li>
+            <li>Improved syntax highlighting tokens for modern Vibe syntax and module usage.</li>
+            <li>Improved accordion accessibility and search ranking behavior.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-success"><div>Published</div><div>These docs are aligned with the same runtime that produced the v1.2 release artifacts.</div></div>
+    </main>
+  </div>
+  <script src="assets/prism-vibe.js"></script>
+  <script src="assets/docs.js"></script>
+</body>
+</html>

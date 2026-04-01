@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>neural Module - Vibe Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/docs.css" />
+</head>
+<body>
+<div class="docs-layout">
+  <aside class="sidebar">
+    <input id="doc-search" class="search-box" placeholder="Search docs" />
+    <div id="search-results" class="search-results"></div>
+    <h3>Standard Library</h3>
+    <a href="../index.html">Home</a>
+    <a href="dsa.html">dsa</a><a href="neural.html">neural</a><a href="ai.html">ai</a><a href="data.html">data</a><a href="image.html">image</a>
+  </aside>
+  <main class="main">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a> / Standard Library / neural</div>
+    <div class="page-title"><h1>neural Module</h1><span class="version-badge">v1.2 Runtime</span><span class="badge badge-new">Updated</span></div>
+    <div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+
+    <h2 id="overview">Overview</h2>
+    <p>The neural module provides first-class tensor objects and a practical model training API for Vibe. In v1.2 runtime it includes tensor construction, tensor math, Sequential models, training history, evaluation metrics, and prediction for both single sample and batch inputs.</p>
+
+    <h2 id="import">Import</h2>
+    <div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import neural;
+
+fn main() {
+    var t = neural.ones([2, 2]);
+    print(t.mean());
+}</code></pre></div>
+
+    <h2 id="core-apis">Core APIs</h2>
+    <div class="accordion active">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><strong>Tensor Construction and Ops</strong><span class="accordion-icon">▼</span></div>
+      <div class="accordion-content">
+        <ul>
+          <li>neural.Tensor(dataOrShape)</li>
+          <li>neural.zeros(shape), neural.ones(shape), neural.randn(shape)</li>
+          <li>Tensor methods: shape, numel, reshape, flatten, sum, mean, item, add, sub, mul, div, matmul, to, requiresGrad, backward, grad</li>
+        </ul>
+        <div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import neural;
+
+fn main() {
+    var a = neural.ones([2, 2]);
+    var b = neural.randn([2, 2]);
+    var c = a.matmul(b).relu();
+
+    print(c.shape());
+    print(c.mean());
+}</code></pre></div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><strong>Model Construction and Training</strong><span class="accordion-icon">▼</span></div>
+      <div class="accordion-content">
+        <ul>
+          <li>neural.Dense(inputSize, outputSize, activation)</li>
+          <li>neural.Sequential(layers)</li>
+          <li>model.compile(optimizer, loss)</li>
+          <li>model.fit(trainX, trainY, epochs)</li>
+          <li>model.evaluate(testX, testY)</li>
+          <li>model.predict(input) for single sample or batch list</li>
+        </ul>
+        <div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import neural;
+
+fn main() {
+    var model = neural.Sequential([
+        neural.Dense(2, 4, "relu"),
+        neural.Dense(4, 2, "softmax")
+    ]);
+
+    model.compile(neural.Adam(0.001), neural.CrossEntropyLoss());
+
+    var x = [[0.0, 1.0], [1.0, 0.0], [1.0, 1.0], [0.0, 0.0]];
+    var y = [[1.0, 0.0], [1.0, 0.0], [0.0, 1.0], [0.0, 1.0]];
+
+    var history = model.fit(x, y, 3);
+    print(history);
+    print(model.evaluate(x, y));
+    print(model.predict([0.2, 0.9]));
+}</code></pre></div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><strong>Utility APIs</strong><span class="accordion-icon">▼</span></div>
+      <div class="accordion-content">
+        <ul>
+          <li>neural.relu(tensor), neural.softmax(tensor)</li>
+          <li>neural.CrossEntropyLoss(), neural.Adam(lr)</li>
+          <li>neural.trainTestSplit(data, labels, testSize)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="notes">Runtime Notes</h2>
+    <div class="callout callout-info"><div>Implementation Detail</div><div>Current v1.2 runtime uses practical MVP math for Dense forward passes and metric computation, enabling real examples while keeping behavior stable and deterministic for docs/tutorials.</div></div>
+    <div class="callout callout-warning"><div>Warning</div><div>Tensor matmul currently supports 2D tensors. Attempting non-2D matmul will raise a runtime error.</div></div>
+
+    <h2 id="related">Related Pages</h2>
+    <p>See <a href="../examples/runtime-showcase.html">runtime showcase</a>, <a href="dsa.html">dsa module</a>, and <a href="ai.html">ai module</a>.</p>
+  </main>
+</div>
+<script src="../assets/prism-vibe.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

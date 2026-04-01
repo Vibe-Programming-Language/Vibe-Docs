@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>image Module - Vibe Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/docs.css" />
+</head>
+<body>
+<div class="docs-layout">
+  <aside class="sidebar">
+    <input id="doc-search" class="search-box" placeholder="Search docs" />
+    <div id="search-results" class="search-results"></div>
+    <h3>Standard Library</h3>
+    <a href="../index.html">Home</a>
+    <a href="dsa.html">dsa</a><a href="neural.html">neural</a><a href="ai.html">ai</a><a href="data.html">data</a><a href="image.html">image</a>
+  </aside>
+  <main class="main">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a> / Standard Library / image</div>
+    <div class="page-title"><h1>image Module</h1><span class="version-badge">v1.2 Runtime</span><span class="badge badge-new">Updated</span></div>
+    <div class="toc"><strong>Table of Contents</strong><ul id="toc-list"></ul></div>
+
+    <h2 id="overview">Overview</h2>
+    <p>The image module provides lightweight image object workflows for loading, transform metadata, and export operations directly in Vibe.</p>
+
+    <h2 id="apis">Current APIs</h2>
+    <div class="accordion active">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><strong>Image Object Lifecycle</strong><span class="accordion-icon">▼</span></div>
+      <div class="accordion-content">
+        <ul>
+          <li>image.load(path) returns image object</li>
+          <li>img.resize(width, height)</li>
+          <li>img.grayscale()</li>
+          <li>img.save(path)</li>
+          <li>img.show()</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="example">Example</h2>
+    <div class="code-block"><div class="code-header"><span class="code-language">vibe</span><button class="copy-btn" onclick="copyCode(this)"><span>Copy</span></button></div><pre><code class="language-vibe">import image;
+
+fn main() {
+    var img = image.load("cat.jpg");
+    img.resize(224, 224).grayscale().save("out.jpg");
+    print(img);
+}</code></pre></div>
+
+    <h2 id="notes">Runtime Notes</h2>
+    <div class="callout callout-info"><div>Info</div><div>The current runtime image object is optimized for stable method chaining and script orchestration while native pixel pipeline features are expanded incrementally.</div></div>
+
+    <h2 id="related">Related Pages</h2>
+    <p>See <a href="data.html">data module</a> and <a href="ai.html">ai module</a>.</p>
+  </main>
+</div>
+<script src="../assets/prism-vibe.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>
