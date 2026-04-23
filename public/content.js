@@ -1712,4 +1712,303 @@ let cache: UserMap = {
 `
   },
 
+
+  "neural-modules": {
+    title: "Neural Modules",
+    content: `<h1>Neural Modules</h1>
+<p>Using <code>vibe.ml</code> and <code>module</code>, Vibe constructs neural-architectures directly mapping to PyTorch-like <code>nn.Module</code> but fully statically typed. </p>
+<pre><code class="language-vibe">import ml;
+
+module MLP {
+    let fc1 = new Linear(784, 128);
+    let fc2 = new Linear(128, 10);
+
+    fn forward(x: Tensor) -&gt; Tensor {
+        return x |&gt; fc1.forward() |&gt; ml.relu() |&gt; fc2.forward();
+    }
+}
+</code></pre>
+`
+  },
+
+  "pipelines": {
+    title: "Data Pipelines",
+    content: `<h1>Data Pipelines</h1>
+<p>Fast pipelines using threaded <code>streams</code>. </p>
+<pre><code class="language-vibe">let raw_data = read_csv(&quot;data.csv&quot;);
+
+let dataloader = raw_data 
+        |&gt; stream()
+        |&gt; map(normalize)
+        |&gt; batch(32)
+        |&gt; prefetch(2); // load two batches onto GPU memory concurrently!
+
+parallel for batch in dataloader {
+    // Neural processing running on multiple cores concurrently
+    model.train_step(batch);
+}
+</code></pre>
+<p>Vibe uses thread-pools and automatic parallelization across pipeline iterators when using <code>parallel for</code>.</p>
+`
+  },
+
+  "tensor-autograd": {
+    title: "Tensor & Autograd (AI Primitives)",
+    content: `<h1>Tensor &amp; Autograd (AI Primitives)</h1>
+<p>Vibe integrates foundational, high-performance Data and AI primitives right into the heart of the standard library, providing native multidimensional arrays and automatic differentiation capabilities suitable for deep learning.</p>
+<h2>Tensors</h2>
+<p>The core numeric primitive for AI tasks in Vibe is a multidimensional <code>Tensor</code>. Under the hood, Vibe&#39;s tensor library employs highly optimized CPU and SIMD numerical operations to handle arrays and perform matrix multiplications.</p>
+<h3>Initializing Tensors</h3>
+<p>Here&#39;s how to create and manipulate a Tensor in Vibe:</p>
+<pre><code class="language-vibe">// Create a 1-dimensional Tensor
+let array1d = Tensor.ones([5]);
+print(&quot;1D Tensor: \${array1d}&quot;);
+
+// Create a 2-dimensional Matrix Tensor with random uniform values
+let matrix = Tensor.rand([4, 4]);
+
+// Tensor addition
+let scaled = matrix + 10.0;
+
+// Matrix operations
+let transformed = matrix.matmul(Tensor.identity([4, 4]));
+</code></pre>
+<h2>Automatic Differentiation (Autograd)</h2>
+<p>For training and fine-tuning neural networks, computing gradients manually is tedious. Vibe implements a dynamic computational graph (autograd module), allowing for automatic gradient computation.</p>
+<h3>Computing Derivatives</h3>
+<pre><code class="language-vibe">let x = Tensor.tensor([2.0, 3.0], requires_grad=true);
+let y = x * x + 3.0 * x;
+
+y.backward();
+
+print(&quot;Gradient of y with respect to x: \${x.grad}&quot;);
+// [ 2*2 + 3, 2*3 + 3 ] =&gt; [ 7.0, 9.0 ]
+</code></pre>
+<p>Vibe&#39;s autograd engine automatically constructs a backward graph on the fly, identical to dynamic frameworks like PyTorch.</p>
+<h2>Frequently Asked Questions (FAQ)</h2>
+<h3>Does it use GPU acceleration (CUDA, Metal)?</h3>
+<p>Currently, the runtime only includes SIMD optimized CPU paths but hardware-dependent backend integrations (like cuBLAS) are under active development.</p>
+<h3>How does this compare to Python libraries like NumPy or PyTorch?</h3>
+<p>The design is deliberately influenced by PyTorch, providing familiar dynamic graph behavior combined with the performance and static guarantees of the Vibe compiler. Vibe can seamlessly interface with existing Python models via the Python Interop feature.</p>
+`
+  },
+
+  "actors": {
+    title: "Actor Models (Distributed Concurrency)",
+    content: `<h1>Actor Models (Distributed Concurrency)</h1>
+<p>Vibe integrates distributed concurrency natively using an Actor model. This allows developers to build highly concurrent, scalable, and resilient systems without manually managing threads, locks, or mutexes.</p>
+<h2>Overview</h2>
+<p>In Vibe, an <code>actor</code> is an isolated container of state and behavior. Actors communicate exclusively by passing asynchronous messages. This guarantees that internal state is never accessed concurrently by multiple threads, eliminating data races by design.</p>
+<h3>Key Concepts</h3>
+<ul>
+<li><strong>Isolation</strong>: An actor&#39;s state cannot be modified directly from the outside.</li>
+<li><strong>Message Passing</strong>: You interact with an actor by sending it messages.</li>
+<li><strong>Fibers</strong>: Vibe actors are lightweight and run on green threads (fibers), allowing you to spawn millions of them efficiently.</li>
+</ul>
+<h2>Example Usage</h2>
+<p>Here is a simple example of defining and spawning an actor to create a Ping-Pong server:</p>
+<pre><code class="language-vibe">actor PingServer {
+    mut count: Int = 0;
+
+    // The &#39;receive&#39; handler is invoked when a message arrives
+    fn receive(msg: String) {
+        if msg == &quot;Ping&quot; {
+            count = count + 1;
+            print(&quot;Received Ping. Sending Pong! (Count: \${count})&quot;);
+        } else {
+            print(&quot;Unknown message: \${msg}&quot;);
+        }
+    }
+}
+
+// Spawn the actor in a lightweight thread
+let server = spawn PingServer();
+
+// Send asynchronous messages
+server.send(&quot;Ping&quot;);
+server.send(&quot;Ping&quot;);
+server.send(&quot;Hello&quot;);
+</code></pre>
+<h2>Advanced Usage</h2>
+<p>Actors can also reply to the sender if a reference to the sender is included, and they can be distributed across networked machines in enterprise deployments.</p>
+<pre><code class="language-vibe">actor MathWorker {
+    fn receive(task: Map) {
+        match task.operation {
+            &quot;add&quot; =&gt; print(&quot;Result: \${task.a + task.b}&quot;),
+            &quot;sub&quot; =&gt; print(&quot;Result: \${task.a - task.b}&quot;),
+            _ =&gt; print(&quot;Error: Unsupported operation&quot;)
+        }
+    }
+}
+
+let worker = spawn MathWorker();
+worker.send({ &quot;operation&quot;: &quot;add&quot;, &quot;a&quot;: 10, &quot;b&quot;: 20 });
+</code></pre>
+<h2>Frequently Asked Questions (FAQ)</h2>
+<h3>Are Vibe actors similar to Erlang or Akka?</h3>
+<p>Yes, the implementation takes heavy inspiration from the Erlang/OTP philosophy and Akka framework.</p>
+<h3>How many actors can I spawn?</h3>
+<p>Because they use lightweight fibers (green threads) mapped to a work-stealing thread pool, you can spawn hundreds of thousands of actors on a standard machine without exhausting OS threads.</p>
+<h3>How are failures handled?</h3>
+<p>Vibe supports supervision trees. You can configure an actor to supervise child actors and define restart strategies (e.g., <code>RestartOne</code>, <code>RestartAll</code>) when an actor panics.</p>
+`
+  },
+
+  "dataframes": {
+    title: "DataFrame Primitives",
+    content: `<h1>DataFrame Primitives</h1>
+<p>Built into <code>vibe.data</code> are high performance dataframes for native, memory efficient analytical workloads using columnar storage.</p>
+<pre><code class="language-vibe">import vibe.data
+
+let df = new DataFrame();
+df.add_column(&quot;A&quot;, [1, 2, 3]);
+df.add_column(&quot;B&quot;, [4.5, 5.5, 6.5]);
+
+df.print_head(2);
+
+let active = df.filter(&quot;A&quot;, 1.0); // Removes row 1 where A isn&#39;t &gt; 1.0
+</code></pre>
+`
+  },
+
+  "destructuring": {
+    title: "Destructuring",
+    content: `<h1>Destructuring</h1>
+<p>Vibe allows you to elegantly unpack values from structures into distinct variables bindings using destructuring.</p>
+<h2>Object Destructuring</h2>
+<pre><code class="language-vibe">class Point {
+    public int x = 10;
+    public int y = 20;
+}
+
+let p = new Point();
+
+// Destructure x and y variables natively into scope
+let { x, y } = p;
+print(x); // 10
+</code></pre>
+<h2>Array Destructuring</h2>
+<pre><code class="language-vibe">let colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];
+let [first, second, third] = colors;
+</code></pre>
+`
+  },
+
+  "pattern-matching": {
+    title: "Pattern Matching",
+    content: `<h1>Pattern Matching</h1>
+<p>Vibe provides powerful and expressive pattern matching constructs, allowing developers to handle complex conditionals without deeply nested <code>if/else</code> statements.</p>
+<h2>Overview of &#39;match&#39;</h2>
+<p>The <code>match</code> expression evaluates an assignment and checks its values against a series of patterns. Once a matching pattern evaluates to <code>true</code>, the corresponding expression or block runs, and the overall &#39;match&#39; finishes.</p>
+<h2>Basic Example</h2>
+<pre><code class="language-vibe">let status = 404;
+
+let errorMsg = match status {
+    200 =&gt; &quot;OK&quot;,
+    404 =&gt; &quot;Not Found&quot;,
+    500 =&gt; &quot;Internal Server Error&quot;,
+    _   =&gt; &quot;Unknown Code&quot;
+};
+
+print(errorMsg); // Outputs &quot;Not Found&quot;
+</code></pre>
+<h2>Advanced Patterns</h2>
+<p>You can combine multiple criteria into match statements, unwrap Enums or Lists, and apply guard conditions.</p>
+<h3>Value List &amp; Condition Guards</h3>
+<pre><code class="language-vibe">let userAge = 35;
+
+match userAge {
+    0 | 1 | 2 =&gt; print(&quot;Infant&quot;),
+    n if n &lt; 13 =&gt; print(&quot;Child&quot;),
+    n if n &lt; 20 =&gt; print(&quot;Teen&quot;),
+    n if n &lt; 65 =&gt; print(&quot;Adult&quot;),
+    _ =&gt; print(&quot;Senior&quot;)
+}
+</code></pre>
+<h3>Type Matching and Destructuring</h3>
+<p>If you have highly dynamic maps or interfaces, pattern matching acts as a type analyzer and casting proxy.</p>
+<pre><code class="language-vibe">let data: Any = &quot;Hello World&quot;;
+
+match data {
+    s: String =&gt; print(&quot;Found string length: \${s.length()}&quot;),
+    i: Int    =&gt; print(&quot;Found an integer squared: \${i * i}&quot;),
+    _         =&gt; print(&quot;Unknown type&quot;)
+}
+</code></pre>
+<h2>Frequently Asked Questions (FAQ)</h2>
+<h3>Is pattern matching exhaustive?</h3>
+<p>Yes. The compiler requires a catch-all wildcard branch (<code>_</code>) unless all possible variants of an Enum or sum-type are accounted for in the pattern branches. This guarantees no runtime crashes from unhandled values.</p>
+<h3>Can I match nested objects?</h3>
+<p>Nested object matching is currently supported on basic Collections (Lists, Maps), but deep object properties may need individual accessors until full structural destructuring is implemented in Vibe 2.0.</p>
+`
+  },
+
+  "pipe": {
+    title: "Pipe Operator (`|>`)",
+    content: `<h1>Pipe Operator (<code>|&gt;</code>)</h1>
+<p>The pipe operator allows you to chain function calls fluidly. It takes the output of the expression on the left and passes it as the <strong>first argument</strong> to the function on the right.</p>
+<h3>Example</h3>
+<pre><code class="language-vibe">// Without pipe:
+let result = capitalize(trim(&quot;  hello  &quot;));
+
+// With pipe:
+let result = &quot;  hello  &quot; |&gt; trim() |&gt; capitalize();
+</code></pre>
+<p>This is especially powerful when chained with data operations and arrays.</p>
+`
+  },
+
+  "python-interop": {
+    title: "Python Interoperability",
+    content: `<h1>Python Interoperability</h1>
+<p>Vibe allows for full integration with Python code through embedded evaluation or native imports using CPython. This ensures you can access Numpy, Pandas, or PyTorch without leaving Vibe&#39;s static performance ecosystem.</p>
+<h2><code>pyimport</code> Keyword</h2>
+<pre><code class="language-vibe">pyimport numpy as np;
+
+let arr = np.array([1, 2, 3]);
+print(np.mean(arr));
+</code></pre>
+<h2><code>python</code> Inline Block</h2>
+<pre><code class="language-vibe">python &quot;
+import math
+print(f&#39;Embedded Python: {math.pi}&#39;)
+&quot;;
+</code></pre>
+`
+  },
+
+  "quantum": {
+    title: "Quantum Computing Primitives",
+    content: `<h1>Quantum Computing Primitives</h1>
+<p>Vibe integrates quantum programming at a low level by interfacing standard gates to local simulations. </p>
+<pre><code class="language-vibe">import quantum;
+
+let qc = new QuantumCircuit(2); // 2 Qubits
+
+qc.h(0);          // Hadamard on Q[0]
+qc.cx(0, 1);      // CNOT entangling Q[0] and Q[1]
+
+let results = qc.measure_all();
+print(results);
+</code></pre>
+`
+  },
+
+  "type-aliases": {
+    title: "Type Aliasing",
+    content: `<h1>Type Aliasing</h1>
+<p>To avoid deep nesting and simplify repeated complex type definitions, you can use <code>type</code>.</p>
+<h2>Syntax</h2>
+<pre><code class="language-vibe">type UserID = Int;
+type UserMap = Map&lt;UserID, String&gt;;
+
+let cache: UserMap = {
+    101: &quot;Alice&quot;,
+    102: &quot;Bob&quot;
+};
+</code></pre>
+<p>This acts as syntactic sugar exactly like in TypeScript or Rust.</p>
+`
+  },
+
 };
